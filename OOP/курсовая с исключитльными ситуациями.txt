@@ -1,0 +1,225 @@
+#include <iostream>
+#include <string>
+#include <iomanip>
+#include <locale>
+#include <stdexcept>
+
+using namespace std;
+
+struct Vertex 
+{
+    string Data;         
+    string Translation; 
+    short int Bal;            
+    Vertex* Left;           
+    Vertex* Right;  
+    Vertex* Equal;
+};
+
+class BinaryTree
+{
+protected:
+    Vertex* Root;
+
+    void DeleteTree(Vertex* node) 
+    {
+        if (node) 
+        {
+            DeleteTree(node->Left);
+            DeleteTree(node->Right);
+            DeleteTree(node->Equal);
+            delete node;
+        }
+    }
+
+public:
+    BinaryTree() : Root(nullptr) {}
+    virtual ~BinaryTree() { DeleteTree(Root); }
+
+    virtual void Insert(const string& key, const string& translation) = 0;
+    virtual string Search_DBD(const string& key) = 0;
+    virtual void Remove(const string& key) = 0;
+    int CalculateHeight(Vertex* node) 
+    {
+        if (!node) return 0;
+        return 1 + max(CalculateHeight(node->Left), CalculateHeight(node->Right));
+    }
+    int GetHeight() 
+    {
+        return CalculateHeight(Root);
+    }
+};
+
+class DBD : public BinaryTree
+{
+private:
+    void Insert(Vertex*& root, const string& key, const string& translation)
+    {
+        if (key.empty())
+            throw invalid_argument("Ключ не может быть пустым.");
+
+        if (!root)
+        {
+            root = new Vertex{ key, translation, 0, nullptr, nullptr };
+            root->Equal = nullptr;
+        }
+        else if (key < root->Data)
+        {
+            Insert(root->Left, key, translation);
+        }
+        else if (key > root->Data)
+        {
+            Insert(root->Right, key, translation);
+        }
+        else if (key == root->Data)
+        {
+            Vertex* newEqual = new Vertex{ key, translation, 0, nullptr, nullptr };
+            newEqual->Equal = root->Equal;
+            root->Equal = newEqual;
+        }
+    }
+
+    string Search_DBD(Vertex* root, const string& key) 
+    {
+        if (!root) throw runtime_error("Слово не найдено.");
+
+        if (key < root->Data) 
+            return Search_DBD(root->Left, key);
+        else if (key > root->Data) 
+            return Search_DBD(root->Right, key);
+        else
+            return root->Translation;
+    }
+
+    void Remove(Vertex*& root, const string& key) 
+    {
+        if (!root) throw runtime_error("Слово для удаления не найдено.");
+
+        if (key < root->Data) 
+            Remove(root->Left, key);
+        else if (key > root->Data) 
+            Remove(root->Right, key);
+        else
+        {
+            if (root->Equal) 
+            {
+                Vertex* temp = root->Equal;
+                root->Equal = root->Equal->Equal;
+                delete temp;
+            }
+            else
+            {
+                if (!root->Left && !root->Right)
+                {
+                    delete root;
+                    root = nullptr;
+                }
+                else if (!root->Left) 
+                {
+                    Vertex* temp = root;
+                    root = root->Right;
+                    delete temp;
+                }
+                else if (!root->Right) 
+                {
+                    Vertex* temp = root;
+                    root = root->Left;
+                    delete temp;
+                }
+                else
+                {
+                    Vertex* minRight = root->Right;
+                    while (minRight->Left) {
+                        minRight = minRight->Left;
+                    }
+                    root->Data = minRight->Data;
+                    root->Translation = minRight->Translation;
+                    Remove(root->Right, minRight->Data);
+                }
+            }
+        }
+    }
+
+public:
+    DBD() : BinaryTree() {}
+
+    void Insert(const string& key, const string& translation) override 
+    {
+        Insert(Root, key, translation);
+    }
+
+    string Search_DBD(const string& key) override
+    {
+        return Search_DBD(Root, key);
+    }
+
+    void Remove(const string& key) override
+    {
+        Remove(Root, key);
+    }
+
+    void TreeRight(Vertex* node) 
+    {
+        if (!node) return;
+        TreeRight(node->Left);
+        cout << node->Data << " -> " << node->Translation << endl;
+        TreeRight(node->Equal);
+        TreeRight(node->Right);
+    }
+
+    void Print() 
+    {
+        if (!Root) 
+        {
+            cout << "Словарь пустой." << std::endl;
+        }
+        else 
+        {
+            TreeRight(Root);
+        }
+    }
+};
+
+int main() 
+{
+    setlocale(LC_ALL, "ru");
+
+    DBD derevo;
+
+    try
+    {
+        derevo.Insert("hello", "привет");
+        derevo.Insert("apple", "яблоко");
+        derevo.Insert("", "пустой"); // Исключение
+    }
+    catch (const invalid_argument& e)
+    {
+        cout << "Ошибка вставки: " << e.what() << endl;
+    }
+
+    try
+    {
+        cout << "Перевод слова 'cat': " << derevo.Search_DBD("cat") << endl;
+    }
+    catch (const runtime_error& e)
+    {
+        cout << "Ошибка поиска: " << e.what() << endl;
+    }
+
+    derevo.Print();
+
+    try
+    {
+        derevo.Remove("hello");
+        derevo.Remove("nonexistent"); // Исключение
+    }
+    catch (const runtime_error& e)
+    {
+        cout << "Ошибка удаления: " << e.what() << endl;
+    }
+
+    derevo.Print();
+    cout << "\nВысота дерева: " << derevo.GetHeight() << endl;
+
+    return 0;
+}

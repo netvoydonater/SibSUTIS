@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Alex\\Desktop\\\u041E\u041E\u041F\\\u043B\u0430\u0431\u0430 5\\\u0437\u0430\u0434\u0430\u043D\u0438\u0435 2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1B1F78EA-CE10-414E-A185-DF6C50C6213B}|\u0437\u0430\u0434\u0430\u043D\u0438\u0435 2.vcxproj|C:\\Users\\Alex\\Desktop\\\u041E\u041E\u041F\\\u043B\u0430\u0431\u0430 5\\\u0437\u0430\u0434\u0430\u043D\u0438\u0435 2\\\u0437\u0430\u0434\u0430\u043D\u0438\u0435 2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{1B1F78EA-CE10-414E-A185-DF6C50C6213B}|\u0437\u0430\u0434\u0430\u043D\u0438\u0435 2.vcxproj|solutionrelative:\u0437\u0430\u0434\u0430\u043D\u0438\u0435 2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "\u0437\u0430\u0434\u0430\u043D\u0438\u0435 2.cpp",
+              "DocumentMoniker": "C:\\Users\\Alex\\Desktop\\\u041E\u041E\u041F\\\u043B\u0430\u0431\u0430 5\\\u0437\u0430\u0434\u0430\u043D\u0438\u0435 2\\\u0437\u0430\u0434\u0430\u043D\u0438\u0435 2.cpp",
+              "RelativeDocumentMoniker": "\u0437\u0430\u0434\u0430\u043D\u0438\u0435 2.cpp",
+              "ToolTip": "C:\\Users\\Alex\\Desktop\\\u041E\u041E\u041F\\\u043B\u0430\u0431\u0430 5\\\u0437\u0430\u0434\u0430\u043D\u0438\u0435 2\\\u0437\u0430\u0434\u0430\u043D\u0438\u0435 2.cpp",
+              "RelativeToolTip": "\u0437\u0430\u0434\u0430\u043D\u0438\u0435 2.cpp",
+              "ViewState": "AgIAAHsBAAAAAAAAAAAswIYBAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-16T07:04:46.732Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

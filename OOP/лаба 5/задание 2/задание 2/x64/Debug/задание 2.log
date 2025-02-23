@@ -1,0 +1,7 @@
+﻿  задание 2.cpp
+C:\Users\Alex\Desktop\ООП\лаба 5\задание 2\задание 2.cpp(69,20): warning C4244: return: преобразование "double" в "float", возможна потеря данных
+C:\Users\Alex\Desktop\ООП\лаба 5\задание 2\задание 2.cpp(257,20): warning C4244: return: преобразование "double" в "float", возможна потеря данных
+C:\Users\Alex\Desktop\ООП\лаба 5\задание 2\задание 2.cpp(321,76): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\Alex\Desktop\ООП\лаба 5\задание 2\задание 2.cpp(321,72): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\Alex\Desktop\ООП\лаба 5\задание 2\задание 2.cpp(389,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  задание 2.vcxproj -> C:\Users\Alex\Desktop\ООП\лаба 5\задание 2\x64\Debug\задание 2.exe
