@@ -1,0 +1,5 @@
+﻿  Шеннон.cpp
+C:\Users\Alex\Desktop\СиАОД\3 семестр\Шеннон\Шеннон.cpp(105,18): warning C4244: =: преобразование "float" в "unsigned short", возможна потеря данных
+C:\Users\Alex\Desktop\СиАОД\3 семестр\Шеннон\Шеннон.cpp(112,22): warning C4244: =: преобразование "float" в "unsigned short", возможна потеря данных
+C:\Users\Alex\Desktop\СиАОД\3 семестр\Шеннон\Шеннон.cpp(180,25): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+  Шеннон.vcxproj -> C:\Users\Alex\Desktop\СиАОД\3 семестр\Шеннон\x64\Debug\Шеннон.exe

@@ -1,0 +1,5 @@
+﻿  лаба сиаод.cpp
+C:\Users\Alex\Desktop\СиАОД\лаба сиаод\лаба сиаод.cpp(127,32): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+C:\Users\Alex\Desktop\СиАОД\лаба сиаод\лаба сиаод.cpp(207,17): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+C:\Users\Alex\Desktop\СиАОД\лаба сиаод\лаба сиаод.cpp(366,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  лаба сиаод.vcxproj -> C:\Users\Alex\Desktop\СиАОД\лаба сиаод\x64\Debug\лаба сиаод.exe

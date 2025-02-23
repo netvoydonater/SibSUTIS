@@ -1,0 +1,7 @@
+﻿  MergeSort.cpp
+C:\Users\Alex\Desktop\СиАОД\2 семестр\MergeSort\MergeSort.cpp(56,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\Alex\Desktop\СиАОД\2 семестр\MergeSort\MergeSort.cpp(114,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\Alex\Desktop\СиАОД\2 семестр\MergeSort\MergeSort.cpp(270,16): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+C:\Users\Alex\Desktop\СиАОД\2 семестр\MergeSort\MergeSort.cpp(270,44): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+C:\Users\Alex\Desktop\СиАОД\2 семестр\MergeSort\MergeSort.cpp(277,9): warning C4101: A: неиспользованная локальная переменная
+  MergeSort.vcxproj -> C:\Users\Alex\Desktop\СиАОД\2 семестр\MergeSort\x64\Debug\MergeSort.exe

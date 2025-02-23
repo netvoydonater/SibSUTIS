@@ -1,0 +1,3 @@
+﻿  исдп + сдп.cpp
+C:\Users\Alex\Desktop\СиАОД\3 семестр\исдп + сдп\исдп + сдп.cpp(126,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  исдп + сдп.vcxproj -> C:\Users\Alex\Desktop\СиАОД\3 семестр\исдп + сдп\x64\Debug\исдп + сдп.exe

@@ -1,0 +1,3 @@
+﻿  hash2.cpp
+C:\Users\Alex\Desktop\СиАОД\hash2\hash2.cpp(171,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  hash2.vcxproj -> C:\Users\Alex\Desktop\СиАОД\hash2\x64\Debug\hash2.exe

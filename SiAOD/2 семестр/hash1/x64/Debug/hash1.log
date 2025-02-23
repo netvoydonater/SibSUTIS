@@ -1,0 +1,4 @@
+﻿  hash1.cpp
+C:\Users\Alex\Desktop\СиАОД\hash1\hash1.cpp(94,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\Alex\Desktop\СиАОД\hash1\hash1.cpp(134,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  hash1.vcxproj -> C:\Users\Alex\Desktop\СиАОД\hash1\x64\Debug\hash1.exe

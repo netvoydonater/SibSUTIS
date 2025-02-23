@@ -1,0 +1,5 @@
+﻿  DigitalSort.cpp
+C:\Users\Alex\Desktop\СиАОД\DigitalSort\DigitalSort.cpp(81,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\Alex\Desktop\СиАОД\DigitalSort\DigitalSort.cpp(143,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\Alex\Desktop\СиАОД\DigitalSort\DigitalSort.cpp(352,9): warning C4101: A: неиспользованная локальная переменная
+  DigitalSort.vcxproj -> C:\Users\Alex\Desktop\СиАОД\DigitalSort\x64\Debug\DigitalSort.exe

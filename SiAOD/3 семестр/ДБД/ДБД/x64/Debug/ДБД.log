@@ -1,0 +1,3 @@
+﻿  ДБД.cpp
+C:\Users\Alex\Desktop\СиАОД\3 семестр\ДБД\ДБД.cpp(310,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  ДБД.vcxproj -> C:\Users\Alex\Desktop\СиАОД\3 семестр\ДБД\x64\Debug\ДБД.exe

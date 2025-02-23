@@ -1,0 +1,3 @@
+﻿  Фано.cpp
+C:\Users\Alex\Desktop\СиАОД\3 семестр\Фано\Фано.cpp(131,24): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+  Фано.vcxproj -> C:\Users\Alex\Desktop\СиАОД\3 семестр\Фано\x64\Debug\Фано.exe

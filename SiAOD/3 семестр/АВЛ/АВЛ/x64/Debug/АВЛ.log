@@ -1,0 +1,3 @@
+﻿  АВЛ.cpp
+C:\Users\Alex\Desktop\СиАОД\3 семестр\АВЛ\АВЛ.cpp(241,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  АВЛ.vcxproj -> C:\Users\Alex\Desktop\СиАОД\3 семестр\АВЛ\x64\Debug\АВЛ.exe

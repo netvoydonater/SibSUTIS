@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Alex\\Desktop\\\u0421\u0438\u0410\u041E\u0414\\3 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u041A-\u043F\u043E\u0438\u0441\u043A\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E79DFE5A-9FE8-479D-9DFB-38F50BE11C8D}|\u0420\u041A-\u043F\u043E\u0438\u0441\u043A.vcxproj|C:\\Users\\Alex\\Desktop\\\u0421\u0438\u0410\u041E\u0414\\3 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u041A-\u043F\u043E\u0438\u0441\u043A\\\u0420\u041A-\u043F\u043E\u0438\u0441\u043A.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E79DFE5A-9FE8-479D-9DFB-38F50BE11C8D}|\u0420\u041A-\u043F\u043E\u0438\u0441\u043A.vcxproj|solutionrelative:\u0420\u041A-\u043F\u043E\u0438\u0441\u043A.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "\u0420\u041A-\u043F\u043E\u0438\u0441\u043A.cpp",
+              "DocumentMoniker": "C:\\Users\\Alex\\Desktop\\\u0421\u0438\u0410\u041E\u0414\\3 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u041A-\u043F\u043E\u0438\u0441\u043A\\\u0420\u041A-\u043F\u043E\u0438\u0441\u043A.cpp",
+              "RelativeDocumentMoniker": "\u0420\u041A-\u043F\u043E\u0438\u0441\u043A.cpp",
+              "ToolTip": "C:\\Users\\Alex\\Desktop\\\u0421\u0438\u0410\u041E\u0414\\3 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u041A-\u043F\u043E\u0438\u0441\u043A\\\u0420\u041A-\u043F\u043E\u0438\u0441\u043A.cpp",
+              "RelativeToolTip": "\u0420\u041A-\u043F\u043E\u0438\u0441\u043A.cpp",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAQwE4AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-10T05:17:50.882Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
