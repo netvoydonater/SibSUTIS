@@ -1,0 +1,275 @@
+nav{
+    height: 80px;
+    width: 100%;
+
+    color: white;
+    position: fixed;
+    z-index: 1000;  
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 2.6;
+}
+
+.menu{
+    margin-top: 32px;
+    margin-left: 45px;
+    float: left;
+}
+
+.menu li{
+    font-size: 18px;
+    font-weight: 500;
+    padding-right: 30px;
+    cursor: pointer;
+    float: left;
+}
+
+.logo{
+    margin-top: 25px;
+    margin-left: 25%;
+    float: left;
+}
+
+.logo h1{
+    font-size: 30px;
+}
+
+.contacts{
+    margin-top: 32px;
+    margin-right: 45px;
+    float: right;
+}
+
+.contacts p{
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.mainList{
+    width: 100%;
+    height: 964px;
+    background: url(../img/bg3.jpg) center/cover fixed no-repeat;
+    opacity: 2.6;
+}
+
+.mainListbg
+{
+    padding-top: 20%;
+    padding-left: 30%;
+    height: 964px;
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+}
+
+.logo_main_list
+{
+    width: 60%;
+    text-align: center;
+    
+}
+
+.logo_main_list h2
+{
+    font-weight: 800;
+    color: white;
+    font-size: 65px;
+}
+
+.Country{
+    width: 100%;
+    height: 820px;
+    margin: 200px 0;
+}
+
+.country_info{
+    width: 65%;
+    margin-left: 15%;
+}
+
+.country_text{
+    width: 50%;
+    float: left ;
+}
+
+.country_text li{
+    letter-spacing: 2px;
+    line-height: 1.1;
+    font-size: 20px;
+    font-weight: 600;
+    padding-top: 4%;
+}
+
+.general_info_country{
+    letter-spacing: 2px;
+    line-height: 1.1;
+    font-size: 20px;
+    font-weight: 600;
+    padding-top: 8%;
+
+}
+
+.country_image{
+    width: 50%;
+    float: left;
+}
+
+img
+{
+    margin: 2% 2%;
+    width: 220px;
+    height: 220px;
+}
+
+.OurService{
+    width: 100%;
+    height: 1057px;
+    background-color: #f5f5f5;
+}
+
+.our_service{
+    padding-top: 10%;
+    width: 65%;
+    height: 100%;
+    margin-left: 17.5%;
+}
+
+.logo_sevices h2{
+    text-align: center;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.services img{
+    width: 80px;
+    height: 80px;
+}
+
+.services
+{
+    margin-top: 10%;
+    margin-left: 5%;
+    text-align: center;
+    width: 100%;
+    float: left;
+}
+
+.services p{
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.service1{
+    padding-left: 50px;
+    width: 30%; 
+    float: left;
+    height: 200px;
+}
+
+.service2{
+    width: 30%;
+    float: left;
+    height: 200px;
+}
+
+.service3{
+    padding-left: 5%;
+    width: 30%; 
+    float: left; 
+    height: 200px;
+}
+
+.service4{
+    padding-top: 10%;
+    padding-right: 5%;
+    width: 30%; 
+    height: 200px;
+    float: left;
+}
+
+.service5{
+    padding-top: 10%;
+    width: 30%; 
+    float: left; 
+    height: 200px;
+}
+
+.Reviews{
+    width: 100%;
+    background-color: #f5f5f5;
+    height: 837px;
+}
+
+.reviews{
+    width: 65%;
+    margin-left: 25%;
+    height: 662px;
+    padding-top: 180px;
+}
+
+.logo_reviews
+{
+    margin-left: 23%;
+    margin-bottom: 5%;
+    font-weight: 800;
+    font-size: 35px;
+}
+
+.logo_reviews h2
+{
+    font-weight: 900;
+}
+.reviews img
+{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    float: left; 
+    margin-top: 5%;
+}
+
+.review1, .review2, .review3, .review4{
+    width: 30%; 
+    height: 40%; 
+    float: left; 
+    margin-right: 20%;
+}
+
+.review1_text, .review2_text, .review3_text, .review4_text{
+    margin-top: 5%; 
+    padding-left: 10%; 
+    font-size: 15px; 
+    letter-spacing: 1.5px; 
+    line-height: 1.2;
+}
+
+
+.contactsour
+{
+    width: 100%;
+    height: 300px;
+}
+
+.container_contacts
+{
+    width: 30%;
+    margin-left: 40%;
+    margin-top: 7%;
+}
+
+.logo_contacts
+{
+    margin-left: 5%;
+    font-size: 20px;
+}
+
+.mobile
+{
+    margin-top: 9%;
+    font-size: 35px;
+    font-weight: 900;
+}
+
+.emails
+{
+    margin-top: 2%;
+    font-size: 35px;
+    font-weight: 900;
+}

@@ -1,0 +1,181 @@
+
+nav
+{
+    width: 100%;
+    height: 80px;
+    background-color: black;
+}
+
+.logo
+{
+    margin: 30px 40px;
+    font-size: 24px;
+    color: white;
+    float: left;
+}
+
+.menu
+{
+    margin-left: 30%;
+    margin-top: 35px;
+    float: left;
+}
+
+.menu li
+{
+    cursor: pointer;
+    font-weight: 500;
+    padding-left: 35px;
+    font-size: 16px;
+    color: white;
+    float: left;
+    
+}
+
+.menu a
+{
+    color: white;
+}
+
+.about_us
+{
+    color: white;
+    height: 964px;
+    
+    background: url(../img/bg1.jpg) center/cover fixed no-repeat;
+    opacity: 2.6;
+}
+
+.bg_about_us
+{
+    height: 964px;
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+}
+
+.content_about_us, .content_reccomedations
+{
+    margin-left: 372px;
+    padding-top: 186px;
+    text-align: center;
+    width: 1160px;
+}
+
+.logo_about_us
+{
+
+    font-size: 14px;
+    padding-bottom: 60px;
+}
+
+.logo_about_us h2
+{
+    font-weight: 600;
+    letter-spacing: 2.5px;
+}
+
+.name_company
+{
+    font-size: 72px;
+    padding-bottom: 38px;
+}
+
+.text_about_us
+{
+    margin-left: 230px;
+    width: 700px;
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+.text_about_us p
+{
+    font-weight: 100;
+}
+
+.text_about_us a
+{
+    color: white;
+    font-weight: 800;
+}
+
+.reccomedations
+{
+    height: 964px;
+    background: url(../img/bg2.jpg) center/cover fixed no-repeat;
+}
+
+.bg_reccomedations
+{
+    height: 964px;
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+}
+
+.question_logo 
+{
+    margin: 74px 0 54px 0;
+}
+
+.question_logo h2
+{
+    color: white;
+    font-size: 18px;
+    line-height: 66px;
+}
+
+.answer
+{
+    width: 700px;
+    margin-left: 230px;
+}
+
+.answer li
+{
+    list-style:disc;
+    color: white;
+    font-size: 20px;
+    line-height: 1.55;
+    font-weight: 300;
+}
+
+.contacts
+{
+    width: 100%;
+    height: 227px;
+}
+
+.contacts_text
+{
+    margin: 67px 560px;
+    color: #000000;
+    font-size: 20px;
+    height: 93px;
+    width: 760px;
+}
+
+.contacts_text p
+{
+    font-weight: 300;
+    line-height: 1.55;
+}
+
+footer
+{
+    height: 246px;
+}
+
+.button
+{
+    cursor: pointer;
+    border: 2px solid black;
+    margin-left: 772px;
+    width: 336px;
+    height: 66px;
+}
+
+.button p
+{
+    font-weight: 600;
+    padding-top: 25px;
+    text-align: center;
+    font-size: 16px;
+}
