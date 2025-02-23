@@ -1,0 +1,137 @@
+#include <iostream>
+#include <ctime>
+#include <locale>
+
+using namespace std;
+int random(int a, int b)
+{
+	if (a > 0) return a + rand() % (b - a);
+	else return a + rand() % (abs(a) + b);
+}
+
+
+
+int main()
+{
+	setlocale(LC_ALL, "ru");
+	srand(time(0));
+	int n = 0, m = 0, k = 0;
+	cin >> n;
+	int *b = new int[n];
+	int *c = new int[m];
+	int *d = new int[k];
+	for (int i = 0; i < n; i++)
+	{
+		b[i] = random(-50, 50);
+		cout << b[i] << " ";
+		if (b[i] > 0)
+		{
+			c[m] = b[i];
+			m++;
+		}
+		else if (b[i] < 0)
+		{
+			d[k] = b[i];
+			k++;
+		}
+	}
+	cout << endl;
+	for (int i = 0; i < m; i++)
+	{
+		cout << c[i] << " ";
+	}
+	cout << endl;
+	for (int i = 0; i < k; i++)
+	{
+		cout << d[i] << " ";
+	}
+	
+}
+
+
+
+
+
+
+
+#include <iostream>
+#include <ctime>
+#include <locale>
+#include <iomanip>
+#include <algorithm>
+
+using namespace std;
+
+double random(double min, double max) 
+{
+	return min + static_cast<double>(rand()) / (static_cast<double>(RAND_MAX) / (max - min));
+}
+
+void printArray(float* arr, int size) {
+	for (int i = 0; i < size; ++i) {
+		cout << arr[i] << " ";
+	}
+	cout << endl;
+}
+
+
+int main()
+{
+	setlocale(LC_ALL, "ru");
+	srand(time(0));
+	int n;
+	cin >> n;
+	float *a = new float[n];
+	float** b = new float* [n];
+	
+	for (int i = 0; i < n; i++)
+	{
+		a[i] = random(1.00, 100.0);
+		b[i] = &a[i];
+	}
+	printArray(a, n);
+	sort(b, b + n, [](float* x, float* y) { return *x < *y; });
+	for (int i = 0; i < n; i++)
+	{
+		cout << *b[i] << " ";
+	}
+	delete[] a;
+	delete[] b;
+}
+
+
+
+
+
+
+#include <iostream>
+
+using namespace std;
+
+
+int main()
+{
+	setlocale(LC_ALL, "ru");
+	int n;
+	cin >> n;
+	int* Array = new int[n+1];
+	for (int i = 0; i < n + 1; i++)
+	{
+		Array[i] = i;
+	}
+	for (int p = 2; p < n + 1; p++)
+	{
+		if (Array[p] != 0)
+		{
+			cout << Array[p] << " ";
+			for (int j = p * p ; j < n + 1; j += p)
+			{
+				Array[j] = 0;
+			}
+		}
+	}
+}
+
+
+
+

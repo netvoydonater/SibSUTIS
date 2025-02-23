@@ -1,0 +1,3 @@
+﻿  Laba 12(sem 2).cpp
+C:\Users\Asus\Desktop\SFML\Laba 12(sem 2)\Include.h(21,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  Laba 12(sem 2).vcxproj -> C:\Users\Asus\Desktop\SFML\Laba 12(sem 2)\x64\Debug\Laba 12(sem 2).exe

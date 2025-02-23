@@ -1,0 +1,70 @@
+#include <iostream>
+#include <ctime>
+#include <algorithm>
+#include <string>
+
+using namespace std;
+void PrintArr(int arr[], int n)
+{
+	for (int i = 0; i < n; i++) {
+		cout << arr[i] << " ";
+	}
+}
+
+
+void Sort(int Arr[])
+{
+	int StartMember = 0;
+	int FinishMember = 49;
+	for (int i = 0; i < 49; i++)
+	{
+		while (StartMember < FinishMember)
+		{
+			if (Arr[StartMember] < 0) StartMember++;
+			else if (Arr[FinishMember] > 0) FinishMember--;
+			else (swap(Arr[FinishMember], Arr[StartMember]));
+		}
+	}
+}
+string BinaryNumberSystem(int x)
+{
+	string Result = "";
+	while (x != 0)
+	{
+		int Remains = x % 2;
+		Result += to_string(Remains);
+		x /= 2;
+	}
+	reverse(Result.begin(), Result.end());
+	return Result; 
+}
+int PositiveNumbers()
+{
+	int Number;
+	cin >> Number;
+	if (Number == 0) return 0;
+	if (Number > 0) cout << Number << " ";
+	return PositiveNumbers();
+	
+}
+int main()
+{
+	srand(time(0));
+	int Array[50];
+	for (int i = 0; i < 50; i++)
+	{
+		Array[i] = rand() % 200 - 100;
+	}
+	Sort(Array);
+	PrintArr(Array, 50);
+	cout << endl << endl;
+
+	cout << BinaryNumberSystem(155543);
+
+	cout << endl << endl;
+
+	PositiveNumbers();
+
+
+}
+

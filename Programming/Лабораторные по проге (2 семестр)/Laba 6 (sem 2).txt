@@ -1,0 +1,78 @@
+#include <iostream>
+#include <cmath>
+#include <locale>
+
+
+using namespace std;
+
+int PerimeterAndArea(double side1, double side2, double side3, double* perimeter, double* area) {
+    if (side1 + side2 > side3 && side1 + side3 > side2 && side2 + side3 > side1) {
+        *perimeter = side1 + side2 + side3;
+        double S = *perimeter / 2;
+        *area = sqrt(S * (S - side1) * (S - side2) * (S - side3));
+        return 1;
+    }
+    else {
+        return 0;
+    }
+}
+
+int main() {
+    setlocale(LC_ALL, "ru"); 
+    double side1, side2, side3;
+    cout << "Введите стороны треугольника: ";
+    cin >> side1 >> side2 >> side3;
+
+    double perimeter, area;
+    int result = PerimeterAndArea(side1, side2, side3, &perimeter, &area);
+
+    if (result) cout << "Периметр: " << perimeter << endl << "Площадь: " << area << endl ;
+    else cout << "Неправильные стороны треугольника." << endl << 0 << '\t' << "Igor";
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+#include <iostream>
+#include <cmath>
+#include <locale>
+
+
+using namespace std;
+
+int Factorial(int n)
+{
+	if (n == 0) return 1;
+	return n * Factorial(n - 1);
+}
+
+void Probability(int n , int m , double &pd , double &pm)
+{
+	double p = 0.45;
+	double q = 0.55;
+	double C = Factorial(n) / (Factorial(m) * Factorial(n - m));
+	pd = C * powf(p, m) * powf(q, n - m);
+	pm = C * powf(q, m) * powf(p, n - m);
+}
+
+int main()
+{
+	setlocale(LC_ALL, "ru");
+	int n, m;
+	double pd, pm;
+	cout << "Введите кол-во детей и кол-во искомых детей: " << endl; cin >> n >> m;
+	if (m > n) cout << "Неверные данные";
+	Probability(n, m, pd, pm);
+	cout << "Вероятность того, что из " << n << " детей будет " << m << " девочек равна: " << pd << endl << "Вероятность того, что из " << n << " детей будет " << m << " мальчиков равна: " << pm;
+	return 1;
+
+}
+
+

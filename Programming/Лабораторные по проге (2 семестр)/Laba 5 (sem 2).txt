@@ -1,0 +1,85 @@
+#include <iostream>
+#include <ctime>
+#include <locale>
+using namespace std;
+
+int Random(int N)
+{
+	return rand() % (N + 1);
+}
+
+int main()
+{
+	setlocale(LC_ALL, "ru");
+	srand(time(0));
+
+
+	int m , k;
+	cout << "Введите размер первоначального массива (m) и кол-во элементов в строке нового массива (k(k < m)): " ; cin >> m >> k;
+	if (k >= m)
+	{
+		return 0;
+	}
+	int SizeRowsNewMassiv = m / k + (m % k > 0);
+	int SizeColsNewMassiv = k;
+
+	int* Massiv = new int[m];
+	for (int i = 0; i < m; i++)
+	{
+		Massiv[i] = Random(100);
+		cout << Massiv[i] << '\t';
+	}
+
+	cout << endl;
+
+	int** NewMassiv = new int* [SizeRowsNewMassiv];
+	for (int i = 0; i < SizeRowsNewMassiv; i++)
+	{
+		NewMassiv[i] = new int[SizeColsNewMassiv];
+		cout << endl;
+		for (int j = 0; j < SizeColsNewMassiv; j++)
+		{
+			if (i * k + j < m)
+			{
+				NewMassiv[i][j] = Massiv[i * k + j];
+			}
+			else
+			{
+				NewMassiv[i][j] = 0;
+			}
+			cout << NewMassiv[i][j] << '\t';
+		}
+	}
+
+}
+
+
+
+
+#include <iostream>
+#include <ctime>
+#include <locale>
+
+using namespace std;
+
+
+int main()
+{
+	setlocale(LC_ALL, "ru");
+	srand(time(0));
+    int rows;
+    cout << "Введите длину строки rows: "; cin >> rows;
+    int** Massiv = new int* [rows];
+
+    for (int i = 0; i < rows; i++) 
+    {
+        Massiv[i] = new int[i + 1];
+        cout << endl;
+        for (int j = 0; j <= i; j++) 
+        {
+            Massiv[i][j] = (i + 1) * (j + 1);
+            cout << Massiv[i][j] << '\t';
+        }
+    }
+}
+

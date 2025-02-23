@@ -1,0 +1,59 @@
+#include "graphics.h"
+#include <stdio.h>
+#include <math.h>
+const int window_width = 800;
+const int window_height = 800;
+const int k = 30;
+const int pred_x = 900;
+const float h = 0.07;
+const int move_x = 10;
+
+float function1(float x) 
+{
+	float function = 1 + x;
+	return (window_height - function * k);
+}
+float function2(float x) 
+{
+	float function = x * x;
+	return (window_height - function * k);
+}
+int main() 
+{
+	initwindow(window_width, window_height);
+	setcolor(LIGHTGREEN);
+	float dot1 = function1(-5), dot2 = function2(-move_x);
+	float difference = 999, difference_x = 0, y_flag = 0;
+	for (float x = -move_x; x < pred_x; x += h) 
+	{
+		float get_y1 = function1(x);
+		float get_y2 = function2(x);
+
+		if (x <= 5 && x >= -5) 
+		{
+			moveto((x - h + move_x) * k, dot1);
+			lineto((x + move_x) * k, get_y1);
+			dot1 = get_y1;
+		}
+		moveto((x - h + move_x) * k, dot2);
+		lineto((x + move_x) * k, get_y2);
+		dot2 = get_y2;
+		float difference1 = get_y1 - get_y2;
+		if (difference1 < 0)
+			difference1 *= -1;
+		if (difference >= difference1) 
+        {
+			difference = difference1;
+			difference_x = x;
+			float y_flag = get_y2;
+
+		}
+	}
+	outtextxy(50, 50, "f1(x) = x*x");
+	outtextxy(270, 400, "f2(x) = x-1");
+	setfillstyle(1, 10);
+	floodfill((h + h + move_x) * k, (int)function1(h) + k, LIGHTGREEN);
+	getch();
+	closegraph();
+	return 0;
+}

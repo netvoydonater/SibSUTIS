@@ -1,0 +1,111 @@
+#include <iostream>	
+#include <algorithm>
+
+using namespace std;
+
+struct School                     //Создание структуры
+{
+	int Number;       //Номер школы
+	int Graduates;    //Кол-во выпускников
+	int UniversityStudents;    //Кол-во студентов поступивших в вуз
+};
+
+struct Room
+{
+	int Number;          //Номер комнаты 
+	int Quantity;         //Кол-во проживающих
+	double Square;        //Площадь комнаты 
+	string Faculty;       //Название факультета
+};
+
+bool ComparisonStudets(const School& SchoolFirst, const School& SchoolSecond)      //В параметры передается две школы , функция для параметра в Sort
+{
+	int FirstPercent = static_cast<double>(SchoolFirst.UniversityStudents) / (SchoolFirst.Graduates) * 100;  //Создается первый процент постувших путем деления числа стдуентов на число окончивших школу (static_cast<double> переводит число в double)
+	int SecondPercent = static_cast<double>(SchoolSecond.UniversityStudents) / (SchoolSecond.Graduates) * 100; //Таким же путем создается и второй процент поступивших для второй школы
+	return FirstPercent > SecondPercent;  //Возвращается больший процент поступивших
+}
+
+bool Words(string* Array, int size, string& words)      //Функция для переноса из массива слов которые не повторяются
+{
+	for (int i = 0; i < size; i++)
+	{
+		if (Array[i] == words) return 0;
+	}
+	return 1;
+}
+
+int main(void)
+{
+	setlocale(LC_ALL, "ru");
+
+	cout << "Введите кол-во школ: ";
+	int n; cin >> n;
+
+	School* schools = new School[n];              //Создание динамического массива из структур 0_0
+	cout << "Введите данные о школе " << endl;
+	for (int i = 0; i < n; i++)               //Заполнения массива записями о каждой структуре 
+	{
+		cout << "Номер школы: "; cin >> schools[i].Number;              //Заполнение номера школы i структуры          
+		cout << "Кол-во выпускников: "; cin >> schools[i].Graduates;       //Заполнение кол-ва выпускников i структуры 
+		cout << "Кол-во поступивших в ВУЗ: "; cin >> schools[i].UniversityStudents;      //Заполнение студентов поступивших в ВУЗ i структуры 
+		if (schools[i].UniversityStudents > schools[i].Number)           //Проверка на неверно введеные записи 
+		{
+			cout << "Неверные данные!";
+			return -1;
+		}
+	}
+	sort(schools, schools + n, ComparisonStudets);           //Сортировка массива структур путем встроенной сортировки библиотеки <algorithm> , в качестве как сортировать используем функцию ComparisonStudets
+	for (int i = 0; i < n; i++)
+	{
+		int Percent = static_cast<double> (schools[i].UniversityStudents) / (schools[i].Graduates) * 100;              //Вывод данных о школах 
+		cout << "В школе номер: " << schools[i].Number << " Выпускников: " << schools[i].Graduates << " и процент поступивших: " << Percent << "%" << endl;
+	}
+
+	cout << "Введите кол-во комнат: ";       //Вводим кол-во комнат
+	int k; cin >> k;
+	Room* rooms = new Room[k];       //Создаем динамический массив из структур Room
+	cout << "Введите данные о комнате " << endl;
+	for (int i = 0; i < k; i++)
+	{
+		cout << "Номер комнаты: "; cin >> rooms[i].Number;
+		cout << "Кол-во проживающих: "; cin >> rooms[i].Quantity;
+		cout << "Площадь комнаты: "; cin >> rooms[i].Square;
+		cout << "Факультет: "; cin >> rooms[i].Faculty;                 //Заполнем данные каждой структуры
+	}
+	string* Faculties = new string[k];           //Создаем массив для факультетов которые не повторяются
+	int countFaculties = 0;       //Переменная для подсчета факультетов
+	for (int i = 0; i < k; i++)
+	{
+		if (Words(Faculties, countFaculties, rooms[i].Faculty))          //Переносим из структуры те факультеты которые не повторяются
+		{
+			Faculties[countFaculties] = rooms[i].Faculty;
+			countFaculties++;                  //Увеличиваем число факультетов
+		}
+	}
+
+	cout << endl << endl;
+
+	for (int i = 0; i < countFaculties; i++)        //Перебираем все факультеты
+	{
+		int countRooms = 0;
+		int countQuantity = 0;           //Переменные для подчета комнат, проживающих, и площади
+		double countSquare = 0.0;
+		
+		for (int j = 0; j < k; j++)           //Перебираем все факультеты в структурах
+		{
+			if (rooms[j].Faculty == Faculties[i])        //Если факультеты структуры совпадает с факультетом из массива не повторяющиеся факульетот
+			{
+				countRooms++;         //Кол-во комнат увеличиваем
+				countQuantity += rooms[j].Quantity;        //Складываем общее кол-во проживающих
+				countSquare += rooms[j].Square;       //Складываем общую площадь
+			}
+		}
+
+		double AverageSquare = countSquare / countQuantity;   //Считаем среднюю площадь на одного проживающего
+
+		cout << "На факультете: " << Faculties[i] << endl;
+		cout << "Кол-во комнат: " << countRooms << endl;               //Вывод всех данных
+		cout << "Кол-во студентов: " << countQuantity << endl;
+		cout << "Средняя площадь на студента: " << AverageSquare << endl;
+	}
+}

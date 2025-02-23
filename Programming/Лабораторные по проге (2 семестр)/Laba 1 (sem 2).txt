@@ -1,0 +1,59 @@
+#include <iostream>
+#include <ctime>
+
+#define PI 3.1415926535
+
+
+using namespace std;
+int Factorial(int n)
+{
+	if (n == 0) return 1;
+	return n * Factorial(n - 1);
+}
+int GetData(int Data)
+{
+	int a = Data % 19;
+	int b = Data % 4;
+	int c = Data % 7;
+	int d = (19 * a + 15) % 30;
+	int e = (2 * b + 4 * c + 6 * d + 6) % 7;
+	int f = f = d + e;
+	return f;
+}
+float POWF(float x, int n)
+{
+	float Result = 1;
+	for (int i = 0; i < n; i++)
+	{
+		Result *= x;
+	}
+	return Result;
+}
+double cosinus(double x)
+{
+	double Result = 0.0;
+	double Member = 1.0;
+	int n = 0;
+	while (fabs(Member) >= 0.0001)
+	{
+		Member = (pow(-1, n) * pow(x, 2 * n)) / Factorial(2 * n);
+		Result += Member;
+		n++;
+	}
+	return Result;
+}
+
+int main()
+{
+	setlocale(LC_ALL, "ru");
+	if (GetData(2024) <= 26)
+	{
+		cout << "Пасха будет " << GetData(2024) + 4 << " Апреля";
+	}
+	else
+	{
+		cout << "Пасха будет " << GetData(2024) - 26 << " Мая" << endl;
+	}
+	cout << cosinus(PI / 3);
+}
+
